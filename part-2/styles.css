@@ -1,0 +1,79 @@
+/* Part 2: write your CSS here, from scratch. */
+:root {
+--color-primary: #dfdeea;
+--spacing-md: 16px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body { 
+    font-family: Arial, sans-serif;
+     line-height: 1.5;
+     background-color:var(--color-primary);
+     margin: 0;
+     padding: var(--spacing-md);
+     max-width: 520px;
+ }
+ nav a{
+    text-decoration: none;
+ }
+ nav{
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+ }
+button{
+    padding: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+     .cards {
+        border: solid 3px var(--color-primary);
+        border-radius: var(--spacing-md);
+        padding: var(--spacing-md);
+   }
+
+   .cards .card{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: var(--spacing-md);
+   }
+    }
+@media (max-width: 375px) {
+   .cards .card{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+   }
+    }
+
+
+
+
+
+/* :root {
+  --primary: #4f46e5;
+}
+
+.card {
+  background-color: var(--primary);
+  padding: 16px;
+  border: 1px solid var(--primary);
+}
+
+.title {
+  color:var(--primary);
+}
+
+.row {
+  display: flex;
+  justfy-content: center;
+} */
+
+
+
+/* 
+  the 3 mistakes are:
+  we don't use the color of root as var(). */

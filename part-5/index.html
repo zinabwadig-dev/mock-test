@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Table | Olive &amp; Salt</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Olive &amp; Salt</h1>
+      <p>Book your table in one minute.</p>
+    </header>
+
+    <main>
+      <!-- novalidate turns off the browser's own checks, so YOUR validation is what we test -->
+      <form id="booking-form" novalidate>
+        <div>
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" />
+          <p class="error" id="name-error"></p>
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="text" />
+          <p class="error" id="email-error"></p>
+        </div>
+
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="text" />
+          <p class="error" id="phone-error"></p>
+        </div>
+
+        <div>
+          <label for="guests">Number of guests (1 to 6)</label>
+          <input id="guests" name="guests" type="number" />
+          <p class="error" id="guests-error"></p>
+        </div>
+
+        <div>
+          <label for="slot">Time</label>
+          <select id="slot" name="slot">
+            <option value="">Choose a time</option>
+            <option value="18:00">18:00</option>
+            <option value="19:00">19:00</option>
+            <option value="20:00">20:00</option>
+            <option value="21:00">21:00</option>
+          </select>
+          <p class="error" id="slot-error"></p>
+        </div>
+
+        <div>
+          <label for="notes">Special requests (optional)</label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+          <p class="error" id="notes-error"></p>
+        </div>
+
+        <button type="submit">Book my table</button>
+        <button type="button" id="clear-draft" onclick="clearForm()">Clear draft</button>
+      </form>
+
+      <p id="summary" class="success hidden"></p>
+      <a id="whatsapp-link" class="hidden" href="#" target="_blank" rel="noopener">Confirm on WhatsApp</a>
+    </main>
+
+    <footer>
+      <p>Olive &amp; Salt | milcodeuni.tech mock test</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
